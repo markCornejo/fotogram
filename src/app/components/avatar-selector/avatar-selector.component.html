@@ -1,0 +1,15 @@
+<ion-row>
+    <ion-col class="text-center">
+        <h3>Seleccione Avatar</h3>
+    </ion-col>
+</ion-row>
+
+<ion-row>
+    <ion-col>
+        <ion-slides [options]="avatarSlide">
+            <ion-slide *ngFor="let avatar of avatars">
+                <img (click)="seleccionarAvatar(avatar)" class="pick-avatar" [ngClass]="{'pick-avatar-seleccionado': avatar.seleccionado}" src="/assets/avatars/{{avatar.img}}">
+            </ion-slide>
+        </ion-slides>
+    </ion-col>
+</ion-row>
